@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Webpage</title>
+
+    <link rel="icon" type="image/png" href="/img/mainlogo.png">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <div id="menu"></div>
+            <a href="#" class="logo"><img src="img/logo.png" alt="LOGO" width="50" height="50"></a>
+            <nav class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="#fish">Fish</a>
+                <a href="#deep">Deep</a>
+                <a href="#cave">Canyon</a>
+            </nav>
+    </header>
+
+    <section class="start">
+        <h2 id="text"><span>Time to Dive in</span><br>Underwater</h2>
+        <img src="img/bird1.png" id="bird1">
+        <img src="img/bird2.png" id="bird2">
+        <img src="img/forest.png" id="forest">
+        <img src="img/rocks.png" id="rocks">
+        <img src="img/water.png" id="water">
+    </section>
+
+    <div class="sec">
+        <h2>Currently under Maintainence</h2>
+        <p>Unable to figure out why certain images won't move</p>
+    </div>
+
+    <section class="water" id="fish">
+        <img src="img/fish1.png" id="fish1">
+        <img src="img/fish2.png" id="fish2">
+        <img src="img/fish3.png" id="fish3">
+        <img src="img/fish4.png" id="fish4">
+        <img src="img/fish5.png" id="fish5">
+    </section>
+
+    <section class="deeper" id="deep">
+        <img src="img/png" id="">
+    </section>
+
+    <section class="canyon" id="cave">
+        <img src="img/canyon.png" id="can">
+    </section>
+                     
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let rocks = document.getElementById('rocks');
+        let forest = document.getElementById('forest');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+        let fish1 = document.getElementById('fish1');
+        let fish2 = document.getElementById('fish2');
+        let fish3 = document.getElementById('fish3');
+        let fish4 = document.getElementById('fish4');
+        let fish5 = document.getElementById('fish5');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+
+            text.style.top = 50 + value * -0.4 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * 0.5 + 'px';
+            fish1.style.top = value * 2 + 'px';
+            fish1.style.left = value * 2 + 'px';
+            fish2.style.top = value * 2 + 'px';
+            fish2.style.left = value * 2 + 'px';
+            fish3.style.top = 50 + value * 1.5 + 'px';
+            fish3.style.left = 50 + value * 1.5 + 'px';
+            fish4.style.top = value * 1.5 + 'px';
+            fish4.style.left = value * 1.5 + 'px';
+            fish5.style.top = value * 1.5 + 'px';
+            fish5.style.left = value * 1.5 + 'px';
+        })
+    </script>
+</body>
+</html>
